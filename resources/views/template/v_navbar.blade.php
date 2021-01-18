@@ -27,12 +27,12 @@
               <p>My Account</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="/notification">
               <i class="material-icons">content_paste</i>
               <p>Notification</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item ">
             <a class="nav-link" href="/dummy/stories">
               <i class="material-icons">library_books</i>
@@ -97,7 +97,10 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="/account">Profile</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/login">Log out</a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                  </form>
+                  <a class="dropdown-item" href="/home">Log out</a>
                 </div>
               </li>
             </ul>

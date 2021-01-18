@@ -15,13 +15,13 @@
 <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <input type="button" onclick="window.location.href='/kegiatandiikuti';" value="Lihat kegiatan yang kamu ikuti" class="btn btn-primary pull-right"/><br><br><br>
+        <input type="button" onclick="window.location.href='/{username}/{storyid)/addcomment';" value="Add Comment" class="btn btn-primary pull-right"/><br><br><br>
         <!-- untuk buat kotak ungu -->
         <div class="card" style="background-color:purple"> 
             <div class="card-body""  style="color:rgb(240,240,240)" >
-                <h3> Judul </h3>
-                <h5><b> nama pembuat story </b> </h5>
-                <h5>ini story tentang awagfafe ini story tentang awagfafe ini story tentang awagfafeini story tentang awagfafe ini story tentang awagfafe ini story tentang awagfafeini story tentang awagfafeini story tentang awagfafe ini story tentang awagfafe ini story tentang awagfafeini story tentang awagfafe</h5>
+                <h3> {{ $stories->story_title }} </h3>
+                <h5><b> nama  </b> </h5>
+                <h5>{{ $stories->story_body }}</h5>
             </div>
         </div>
         @foreach($comments as $datacomments)

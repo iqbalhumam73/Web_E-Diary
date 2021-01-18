@@ -14,16 +14,14 @@ class Account extends Migration
     public function up()
     {
         {
-            Schema::create('account', function (Blueprint $table) {
-                $table->increments('account_id');
-                $table->char('account_username', 40)->unique();;
-                $table->char('account_name', 40);
-                $table->char('account_email', 40)->unique();
-                $table->char('account_phone', 14)->nullable();
-                $table->string('account_photo', 40)->nullable();
-                $table->text('account_bio')->nullable();
+            Schema::create('users', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->string('email')->unique();
+                $table->timestamp('email_verified_at')->nullable();
+                $table->string('password');
+                $table->rememberToken();
                 $table->timestamps();
-
             });
         }
     }

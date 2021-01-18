@@ -8,6 +8,7 @@ use App\Models\TimelineModel;
 class TimelineController extends Controller
 {
     public function __construct(){
+        $this->middleware('auth');
         // dideklatasikan di construct supaya bisa dipake di semua method
         $this->TimelineModel = new TimelineModel();
     }

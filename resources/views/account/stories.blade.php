@@ -35,8 +35,7 @@
                                                 <td>{{ $data->story_title }}</td>
                                                 <td>{{ $data->story_body }}</td>
                                                 <td>
-                                                    <a href="" class="btn btn-sm btn-warning centerbutton">Edit</a>
-                                                    <a href="" class="btn btn-sm btn-warning">Comments</a>
+                                                    <a href="/{{ $data->story_id }}/storiescomment" class="btn btn-sm btn-warning">Comments</a>
                                                 </td>
                                             </tr>
                                         @endforeach

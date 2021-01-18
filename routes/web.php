@@ -12,6 +12,7 @@ use App\Http\Controllers\FollowersController;
 use App\Http\Controllers\StoriesController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\StoriesCommentController;
+use App\Http\Controllers\AddCommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contoh', function () {
+    return view('contoh');
+});
+
 Route::get('/timeline', [TimelineController::class, 'index']);
 Route::get('/account/{username}', [AccountController::class, 'index']);
 Route::get('/notification', [NotificationController::class, 'index']);
@@ -36,9 +41,13 @@ Route::get('/signup', [SignupController::class, 'index']);
 Route::get('/{username}/following', [FollowingController::class, 'index']);
 Route::get('/{username}/followers', [FollowersController::class, 'index']);
 Route::get('/{username}/stories', [StoriesController::class, 'index']);
-Route::get('/{username}/{storyid}/storiescomment', [StoriesCommentController::class, 'index']);
+Route::get('/{storyid}/storiescomment', [StoriesController::class, 'comment']);
+Route::get('/{username}/{storyid}/addcomment', [AddCommentController::class, 'index']);
 Route::get('/{username}/playlist', [PlaylistController::class, 'index']);
 
 
 
 // /{username}/following
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

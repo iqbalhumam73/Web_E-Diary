@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AccountController extends Controller
+class AddCommentController extends Controller
 {
-    public function index($username)
+    public function index()
     {
         $this->middleware('auth');
-        return view("account");
+        return view("account/addcomment");
     }
 }
+

@@ -37,8 +37,7 @@
                                                 <td>{{ $datatimeline->story_title }}</td>
                                                 <td>{{ $datatimeline->story_body }}</td>
                                                 <td>
-                                                    <a href="" class="btn btn-sm btn-warning centerbutton">Edit</a>
-                                                    <a href="" class="btn btn-sm btn-warning">Comments</a>
+                                                    <a href="/{{ $datatimeline->story_id }}/storiescomment" class="btn btn-sm btn-warning">Comments</a>
                                                 </td>
                                             </tr>
                                         @endforeach

@@ -12,44 +12,8 @@
 @section('main')
 <div class="container-fluid">
   <div class="row">
-    <!-- start followers -->
-      <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="card card-stats">
-          <div class="card-header card-header-warning card-header-icon">
-            <div class="card-icon">
-              <i class="material-icons">person</i>
-            </div>
-              <p class="card-category">Followers</p>
-              <h3 class="card-title">73M</h3>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <a href="/account/followers">See all followers</a>
-              </div>
-            </div>
-          </div>
-          </div>
-          <!-- batas followers -->
-          <!-- start following -->
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-header card-header-warning card-header-icon">
-                <div class="card-icon">
-                  <i class="material-icons">person</i>
-                </div>
-                <p class="card-category">Following</p>
-                <h3 class="card-title">2.4K</h3>
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <a href="/account/following">See all following</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end of following -->
           <!-- start my story -->
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-12 col-md-6 col-sm-6">
             <div class="card card-stats">
               <div class="card-header card-header-warning card-header-icon">
                 <div class="card-icon">
@@ -60,30 +24,12 @@
               </div>
               <div class="card-footer">
                 <div class="stats">
-                  <a href="/account/stories">See all stories</a>
+                  <a href="/dummy/stories">See all stories</a>
                 </div>
               </div>
             </div>
           </div>
           <!-- end of story -->
-          <!-- playlist -->
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-header card-header-warning card-header-icon">
-                <div class="card-icon">
-                  <i class="material-icons">library_books</i>
-                </div>
-                <p class="card-category">My Playlist</p>
-                <h3 class="card-title">26</h3>
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <a href="/account/playlist">See all playlist</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end of playlist -->
           <!-- personal info-->
           <div class="col-md-8">
             <div class="card">
