@@ -26,7 +26,7 @@
                                         <th>ID</th>
                                         <th>Title</th>
                                         <th>Story</th>
-                                        <th>Action</th>
+                                        <!-- <th>Action</th> -->
                                     </thead>
                                     <tbody>
                                         @foreach($stories as $data)
@@ -34,9 +34,9 @@
                                                 <td>{{ $data->story_id }}</td>
                                                 <td>{{ $data->story_title }}</td>
                                                 <td>{{ $data->story_body }}</td>
-                                                <td>
+                                                <!-- <td>
                                                     <a href="/{{ $data->story_id }}/storiescomment" class="btn btn-sm btn-warning">Comments</a>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                         @endforeach
                                     </tbody>

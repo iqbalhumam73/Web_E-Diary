@@ -81,11 +81,8 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="/notification">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="/notification">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="/notification">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="/notification">Another Notification</a>
-                  <a class="dropdown-item" href="/notification">Another One</a>
+                  <a class="dropdown-item" href="/notification">Story anda sudah di-upload</a>
+                  <a class="dropdown-item" href="/notification">Ze punya story baru</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
