@@ -20,7 +20,7 @@
                   <i class="material-icons">library_books</i>
                 </div>
                 <p class="card-category">My Story</p>
-                <h3 class="card-title">666</h3>
+                <!-- <h3 class="card-title">666</h3> -->
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -40,20 +40,11 @@
               <div class="card-body">
                 <form>
                   <div class="row">
-                    <div class="col-md-5">
-                      <div class="form-group">
-                        <label class="bmd-label-floating">Company</label>
-                        <div class="form-group">
-                          <label class="bmd-label-floating"> ITS</label>
-                          <textarea class="form-control" disabled></textarea>
-                        </div>
-                      </div>
-                    </div>
                     <div class="col-md-3">
                       <div class="form-group">
                         <label class="bmd-label-floating">Username</label>
                         <div class="form-group">
-                          <label class="bmd-label-floating">iqbalhumam73</label>
+                          <label class="bmd-label-floating">{{ Auth::user()->name}}</label>
                           <textarea class="form-control" disabled></textarea>
                         </div>
                       </div>
@@ -62,53 +53,19 @@
                       <div class="form-group">
                         <label class="bmd-label-floating">Email address</label>
                         <div class="form-group">
-                          <label class="bmd-label-floating">iqbalhumam73@gmail.com</label>
+                          <label class="bmd-label-floating">{{ Auth::user()->email}}</label>
                           <textarea class="form-control" disabled></textarea>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Fist Name</label>
-                          <div class="form-group">
-                            <label class="bmd-label-floating">Iqbal</label>
-                            <textarea class="form-control" disabled></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Last Name</label>
-                          <div class="form-group">
-                             <label class="bmd-label-floating">Humam</label>
-                             <textarea class="form-control" disabled></textarea>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label>About Me</label>
-                          <div class="form-group">
-                            <label class="bmd-label-floating">Informatics Student</label>
-                            <textarea class="form-control" disabled rows="2"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary pull-right">
-                      Update Profile
-                    </button>
                     <div class="clearfix">
                   </div>
                 </form>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <!-- <div class="col-md-4">
             <div class="card card-profile">
               <div class="card-avatar">
                 <a href="javascript:;">
@@ -124,7 +81,7 @@
                 <a href="javascript:;" class="btn btn-primary btn-round">Follow</a>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- end of data -->
           <!-- tabel -->
         </div>

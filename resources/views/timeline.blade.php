@@ -33,7 +33,7 @@
                                     <tbody>
                                         @foreach($stories as $datatimeline)
                                             <tr>
-                                                <td>fagaag</td>
+                                                <td>Ze</td>
                                                 <td>{{ $datatimeline->story_title }}</td>
                                                 <td>{{ $datatimeline->story_body }}</td>
                                                 <!-- <td>
