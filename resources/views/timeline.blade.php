@@ -28,17 +28,17 @@
                                         <th>Nama</th>
                                         <th>Title</th>
                                         <th>Story</th>
-                                        <th>Action</th>
+                                        <!-- <th>Action</th> -->
                                     </thead>
                                     <tbody>
                                         @foreach($stories as $datatimeline)
                                             <tr>
-                                                <td>taylor</td>
+                                                <td>fagaag</td>
                                                 <td>{{ $datatimeline->story_title }}</td>
                                                 <td>{{ $datatimeline->story_body }}</td>
-                                                <td>
+                                                <!-- <td>
                                                     <a href="/{{ $datatimeline->story_id }}/storiescomment" class="btn btn-sm btn-warning">Comments</a>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                         @endforeach
                                     </tbody>

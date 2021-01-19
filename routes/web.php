@@ -28,14 +28,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contoh', function () {
-    return view('contoh');
-});
-
-Route::get('/timeline', [TimelineController::class, 'index']);
+Route::get('/timeline', [TimelineController::class, 'index'])->name('timeline');
 Route::get('/account/{username}', [AccountController::class, 'index']);
 Route::get('/notification', [NotificationController::class, 'index']);
-Route::get('/account/newstory', [NewStoryController::class, 'index']);
+Route::get('/{username}/newstory', [StoriesController::class, 'newStory']);
+Route::post('/story/insert', [StoriesController::class, 'insert']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/signup', [SignupController::class, 'index']);
 Route::get('/{username}/following', [FollowingController::class, 'index']);

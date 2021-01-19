@@ -18,4 +18,8 @@ class StoriesModel extends Model
     public function AllComments($story_id){
         return $users = DB::table('story_comment')->where('story_id', $story_id)->get();
     }
+
+    public function newStory($story){
+        DB::table('story')->insert($story);
+    }
 }

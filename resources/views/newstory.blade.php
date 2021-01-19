@@ -23,33 +23,22 @@
 		        <div class="col-md-9">
 			        <div class="contact-form">
 				        <div class="form-group">
-				          <label class="control-label col-sm-2" for="fname">Title:</label>
-				          <div class="col-sm-10">          
-					          <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
-				          </div>
-				      </div>
-				      <div class="form-group">
-				        <label class="control-label col-sm-2" for="lname">Playlist:</label>
-				        <form action="/action_page.php">
-                            <select id="cars" name="cars">
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="fiat">Fiat</option>
-                                <option value="audi">Audi</option>
-                            </select>
-                            <textarea class="form-control" enabled></textarea>
-                        </form>
-				      </div>
-				      <div class="form-group">
-				        <label class="control-label col-sm-2" for="comment">Story:</label>
-				        <div class="col-sm-10">
-					        <textarea class="form-control" rows="5" id="comment"></textarea>
-				        </div>
-				      </div>
-				      <div class="form-group">        
-				        <div class="col-sm-offset-2 col-sm-10">
-					        <button type="submit" class="btn btn-default">Submit</button>
-				        </div>
+				          <!-- <label class="control-label col-sm-2" for="fname">Title:</label> -->
+				          <form action="/story/insert" method="POST" enctype="multipart/form-data">
+								@csrf 
+								<div class="form-group">
+									<label class="control-label col-sm-2" for="fname">Title:</label>
+									<input name="story_title" class="form-control">	
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-sm-2" for="fname">Story:</label>
+									<input name="story_body" class="form-control">	
+								</div>
+								<div class="col-sm-offset-2 col-sm-10">
+					        		<button type="submit" class="btn btn-default">Submit</button>
+				        		</div>
+						  </form>
 				      </div>
 			      </div>
 		      </div>

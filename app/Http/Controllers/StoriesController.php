@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\StoriesModel;
+use Illuminate\Support\Facades\Auth;
 
 class StoriesController extends Controller
 {
@@ -20,6 +21,12 @@ class StoriesController extends Controller
         return view('account/stories', $data);
     }
 
+    public function newStory()
+    {
+        $this->middleware('auth');
+        return view("newstory");
+    }
+
     public function comment($story_id){
         $datastory = [
             'stories' => $this->StoriesModel->Comment($story_id),
@@ -28,6 +35,23 @@ class StoriesController extends Controller
             'comments' => $this->StoriesModel->AllComments($story_id),
         ];
         return view('account/storiescomment', $datastory, $datacomment);
+    }
+
+    public function insert()
+    {
+        Request()->validate([
+            // 'story_users_id' -> 'required'
+            'story_title' => 'required',
+            'story_body' => 'required',
+        ]);
+
+        $story = [
+            'story_users_id' => Auth::user()->id,
+            'story_title' => Request()->story_title,
+            'story_body' => Request()->story_body,
+        ];
+        $this->StoriesModel->newStory($story);
+        return redirect()->route('timeline');
     }
 
 }
